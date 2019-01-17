@@ -1,4 +1,4 @@
-# Station Finder
+# Station Finder - Azure Function
 
 This is a simple application build with Azure Functions for Serverless API and React for the Client Side.
 
@@ -13,5 +13,5 @@ This is a simple application build with Azure Functions for Serverless API and R
 - VS Code/Visual Studio
 
 # How To Run
-- Clone the repo `git clone https://github.com/rafaykh90/StationFinder.git`
+- Clone the repo `git clone https://github.com/rafaykh90/StationFinder-AzureFunc-JS.git`
 - Run `func host start` (Make sure you have already installed the Azure Functions Core tools - change port using `-p <PortNumber>` if necessary) 
