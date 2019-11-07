@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  station-finder-server:
+    container_name: station-finder-server
+    build: 
+      context: .
+      dockerfile: Dockerfile.Server
+    ports: 
+      - '5000:80'
+    
+  station-finder-client:
+    container_name: station-finder-client
+    build:
+      context: .
+      dockerfile: Dockerfile.Client
+    ports:
+      - '80:80'
