@@ -15,7 +15,7 @@ async function CalculatePower(station, deviceLocation) {
     return power;
 };
 
-module.exports = {
+export default {
     CalculateDistance,
     CalculatePower
 };

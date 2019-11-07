@@ -1,4 +1,4 @@
-var calculations = require('../js/calculation');
+import { CalculatePower, CalculateDistance } from '../js/calculation';
 
 var LinkStations = [
     { location: { x: 0, y: 0 }, reach: 10 },
@@ -9,8 +9,8 @@ var LinkStations = [
 async function CreateDeviceToStationObject (station, deviceLocation) {
     var currObj = {
         station,
-        power: await calculations.CalculatePower(station, deviceLocation),
-        distance: await calculations.CalculateDistance(station.location, deviceLocation)
+        power: await CalculatePower(station, deviceLocation),
+        distance: await CalculateDistance(station.location, deviceLocation)
     }
     return currObj;
 };
@@ -29,6 +29,4 @@ async function CalculateValues(x, y) {
     return deviceToStationData;
 };
 
-module.exports = {
-    CalculateValuesForDeviceToStation: CalculateValues
-};
+export const CalculateValuesForDeviceToStation = CalculateValues;

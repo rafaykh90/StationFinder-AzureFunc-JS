@@ -1,11 +1,11 @@
-var StationService = require('../Services/StationFinderService');
+import { CalculateValuesForDeviceToStation } from '../Services/StationFinderService';
 
-module.exports = async function (context, req) {
+export default async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
 
     if (req.query.x && req.query.y) {
         var DeviceStationData = [];
-        DeviceStationData = await StationService.CalculateValuesForDeviceToStation(parseFloat(req.query.x), parseFloat(req.query.y))
+        DeviceStationData = await CalculateValuesForDeviceToStation(parseFloat(req.query.x), parseFloat(req.query.y))
         console.log(DeviceStationData);
         context.res = {
             status: 200,
